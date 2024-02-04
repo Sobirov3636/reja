@@ -1,0 +1,20 @@
+{
+  "name": "Stave",
+  "profession": "Software Engineer",
+  "age": "20",
+  "residence": "S.Korea",
+  "address": "S.Korea, Busan",
+  "languages": ["Uzbek", "Korean", "English"],
+  "skills": ["Html", "Css", "Js", "NodeJS", "Python"],
+  "extra_skills": ["Bootstrap, Materialize", "Styling, Sass", "Django, Flask", "GIT Knowledge"],
+  "work_place": "IT Company",
+  "service_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida ex et urna pretium, a semper tortor dapibus. In id neque non magna rhoncus scelerisque. Donec sagittis tincidunt ipsum, sit amet sodales nisl fringilla at. Sed mattis faucibus rutrum.",
+  "about_me": "Vivamus mollis, erat sed finibus luctus, dolor turpis aliquam sapien, at dictum lorem libero in eros. Nulla elementum nulla eu velit mattis aliquam. Proin ut risus dolor. Suspendisse consectetur faucibus mauris, at mattis leo tempus pretium. Maecenas dui risus, ultricies sit amet massa nec, porta consequat leo.",
+  "city": "Denau",
+  "title": ["Flower", "Seedlings", "Gardner", "Old", "New"],
+  "flower_desc": ["What is a Flower?", "What is a Seedlings?", "Who is Gardner?"],
+  "flower_name": ["Tulip", "Daffodil", "Poppy", "Sunflower", "Bluebell", "Rose", "Snowdrop", "Cherry", "blassom"],
+  "flower_price": ["15$", "25$", "15$", "20$", "35$", "30$", "22$", "19$", "9$"],
+  "famous_words": ["World is Beautiful with Flowers"],
+  "famous_name": ["Stave Jobs "]
+}
