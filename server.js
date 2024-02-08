@@ -12,7 +12,8 @@ fs.readFile("database/user.json", "utf-8", (err, data) => {
     user = JSON.parse(data);
   }
 });
-
+//use => middleware
+//set => setting
 // 1: Kirish code
 app.use(express.static("public")); // brouserlarga public folder ochiq degani.
 app.use(express.json()); // kirib kelayotgan data ni objectga ozgartirib beradi.
