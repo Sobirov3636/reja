@@ -1,43 +1,26 @@
-console.log("Web Serverni boshlash");
-const express = require("express");
-const app = express();
 const http = require("http");
-const fs = require("fs");
+const mongodb = require("mongodb");
 
-let user;
-fs.readFile("database/user.json", "utf-8", (err, data) => {
-  if (err) {
-    console.log("ERROR:", err);
-  } else {
-    user = JSON.parse(data);
+let db;
+const connectionString = "mongodb+srv://sobirov3636:ali@reja.ouh2ajp.mongodb.net/";
+
+mongodb.connect(
+  connectionString,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+  (err, client) => {
+    if (err) console.log("ERROR on connection MongoDB");
+    else {
+      console.log("MongoDb connection succeed");
+      module.exports = client;
+      const app = require("./app");
+      const server = http.createServer(app);
+      let PORT = 3005;
+      server.listen(PORT, function () {
+        console.log(`The server is running successfully on port: ${PORT}, http://localhost:${PORT}`);
+      });
+    }
   }
-});
-//use => middleware
-//set => setting
-// 1: Kirish code
-app.use(express.static("public")); // brouserlarga public folder ochiq degani.
-app.use(express.json()); // kirib kelayotgan data ni objectga ozgartirib beradi.
-app.use(express.urlencoded({ extended: true })); // html formdan kelgan ma'lumotlarni qabul qiladi.
-
-// 2: Session code
-
-// 3: Views code
-app.set("views", "views"); // folderni korsatyapmiz.
-app.set("view engine", "ejs"); // view engine ejs ekanligini korsatyapmiz.
-
-// 4: Routing code
-app.post("/create-item", (req, res) => {
-  res.json({ test: "success" });
-});
-app.get("/author", function (req, res) {
-  res.render("author", { user: user });
-});
-app.get("/", function (req, res) {
-  res.render("reja");
-});
-
-const server = http.createServer(app);
-let PORT = 3005;
-server.listen(PORT, function () {
-  console.log(`The server is running successfully on port: ${PORT}, http://localhost:${PORT}`);
-});
+);
