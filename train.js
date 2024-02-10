@@ -1,16 +1,16 @@
-// A-TASK
-const countLetter = (string, l) => {
-  let count = 0;
-  string.split("").forEach((letter) => {
-    if (letter === l) {
-      count++;
-    }
-  });
-  return count;
-};
+// // A-TASK
+// const countLetter = (string, l) => {
+//   let count = 0;
+//   string.split("").forEach((letter) => {
+//     if (letter === l) {
+//       count++;
+//     }
+//   });
+//   return count;
+// };
 
-const res = countLetter("engineer", "e");
-console.log(res);
+// const res = countLetter("engineer", "e");
+// console.log(res);
 
 // console.log("TRAIN AREA!");
 // console.log("Jack Ma maslahatlari");
