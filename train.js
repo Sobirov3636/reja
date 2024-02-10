@@ -1,3 +1,16 @@
+// B-TASK
+const countLetter = (string) => {
+  let count = 0;
+  string.split("").forEach((letter) => {
+    if (parseInt(letter)) {
+      count++;
+    }
+  });
+  return count;
+};
+
+const res = countLetter("enginas2345eer");
+console.log(`Berilgan string ichida ${res} ta raqam bor`);
 // // A-TASK
 // const countLetter = (string, l) => {
 //   let count = 0;
