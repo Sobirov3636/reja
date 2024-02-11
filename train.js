@@ -1,3 +1,38 @@
+// Count Animals
+const animal_list = [
+  "fox",
+  "ant",
+  "bird",
+  "lion",
+  "wolf",
+  "deer",
+  "bear",
+  "frog",
+  "hen",
+  "mole",
+  "duck",
+  "goat",
+  "dog",
+  "cat",
+  "bat",
+  "cock",
+  "cow",
+];
+
+const findAnimals = (str) => {
+  return animal_list.filter((ele) => {
+    for (const char of ele) {
+      if (!str.includes(char)) {
+        return false;
+      }
+    }
+    return true;
+  });
+};
+
+const javob = findAnimals("dgoat");
+console.log(javob);
+
 // B-TASK
 const countLetter = (string) => {
   let count = 0;
