@@ -40,12 +40,45 @@ document.addEventListener("click", function (e) {
           e.target.parentElement.parentElement.remove();
         })
         .catch((err) => {
-          console.log("Iltimos qaytadan harakat qilin");
+          console.log("Iltimos qaytadan harakat qiling  ");
         });
     }
   }
   // edit operation
   if (e.target.classList.contains("edit-me")) {
-    alert("Clicked the edit button");
+    let = userInput = prompt(
+      "Ozgartirish kiriting",
+      e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
+    );
+
+    if (userInput) {
+      axios
+        .post("/edit-item", {
+          id: e.target.getAttribute("data-id"),
+          new_input: userInput,
+        })
+        .then((response) => {
+          console.log(response.data);
+          e.target.parentElement.parentElement.querySelector(".item-text").innerHTML = userInput;
+        })
+        .catch((err) => {
+          console.log("Iltimos qaytadan harakat qiling  ");
+        });
+    }
+  }
+});
+
+// delete all functionality
+document.getElementById("clean-all").addEventListener("click", function () {
+  if (confirm("Hamma rejalarni o'chirmoqchimisiz?")) {
+    axios
+      .post("/delete-all", { delete_all: true })
+      .then((response) => {
+        alert(response.data.state);
+        document.location.reload();
+      })
+      .catch((err) => {
+        console.log("Iltimos qaytadan harakat qiling  ");
+      });
   }
 });

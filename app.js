@@ -49,6 +49,31 @@ app.post("/delete-item", (req, res) => {
     res.json({ state: "success" });
   });
 });
+
+// edit item
+app.post("/edit-item", (req, res) => {
+  const data = req.body;
+  console.log(data);
+  db.collection("plans").findOneAndUpdate(
+    { _id: new mongodb.ObjectId(data.id) },
+    { $set: { reja: data.new_input } },
+    (err, data) => {
+      res.json({ state: "success" });
+    }
+  );
+});
+
+// delete all
+
+app.post("/delete-all", (req, res) => {
+  if (req.body.delete_all) {
+    db.collection("plans").deleteMany(function () {
+      res.json({ state: "hamma rejalar o'chirildi" });
+    });
+  }
+});
+
+// author portfoilo
 app.get("/author", function (req, res) {
   console.log("user entered /author");
 
