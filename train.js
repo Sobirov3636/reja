@@ -1,54 +1,62 @@
+// D-TASK
+
+const checkContent = (str1, str2) => {
+  return str1.split("").sort().join("") === str2.split("").sort().join("");
+};
+const res = checkContent("sobirov", "ibvorso");
+console.log(res);
+
 // C-TASK
 // Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. Har bir method ishga tushgan vaqt ham log qilinsin.
 // MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud! shop.sotish('non', 3) & shop.qabul('cola', 4) & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
 
-class Shop {
-  constructor(product1, product2, product3) {
-    this.non = product1;
-    this.lagmon = product2;
-    this.cola = product3;
-  }
+// class Shop {
+//   constructor(product1, product2, product3) {
+//     this.non = product1;
+//     this.lagmon = product2;
+//     this.cola = product3;
+//   }
 
-  // methods
+//   // methods
 
-  getCurrentTime() {
-    const now = new Date();
-    const hours = now.getHours();
-    const minutes = now.getMinutes();
-    const currentTime = `${hours}:${minutes}`;
-    return currentTime;
-  }
+//   getCurrentTime() {
+//     const now = new Date();
+//     const hours = now.getHours();
+//     const minutes = now.getMinutes();
+//     const currentTime = `${hours}:${minutes}`;
+//     return currentTime;
+//   }
 
-  qoldiq() {
-    const currentTime = this.getCurrentTime();
-    console.log(`Hozir ${currentTime}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`);
-  }
-  sotish(productName, num) {
-    if (productName === "non") {
-      this.non -= num;
-    } else if (productName === "lagmon") {
-      this.lagmon -= num;
-    } else {
-      this.cola -= num;
-    }
-  }
-  qabul(productName, num) {
-    if (productName === "non") {
-      this.non += num;
-    } else if (productName === "lagmon") {
-      this.lagmon += num;
-    } else {
-      this.cola += num;
-    }
-  }
-}
+//   qoldiq() {
+//     const currentTime = this.getCurrentTime();
+//     console.log(`Hozir ${currentTime}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`);
+//   }
+//   sotish(productName, num) {
+//     if (productName === "non") {
+//       this.non -= num;
+//     } else if (productName === "lagmon") {
+//       this.lagmon -= num;
+//     } else {
+//       this.cola -= num;
+//     }
+//   }
+//   qabul(productName, num) {
+//     if (productName === "non") {
+//       this.non += num;
+//     } else if (productName === "lagmon") {
+//       this.lagmon += num;
+//     } else {
+//       this.cola += num;
+//     }
+//   }
+// }
 
-const shop = new Shop(4, 5, 2);
-shop.qabul("cola", 5);
-shop.sotish("cola", 1);
-shop.sotish("lagmon", 2);
-shop.sotish("non", 3);
-shop.qoldiq();
+// const shop = new Shop(4, 5, 2);
+// shop.qabul("cola", 5);
+// shop.sotish("cola", 1);
+// shop.sotish("lagmon", 2);
+// shop.sotish("non", 3);
+// shop.qoldiq();
 
 // // Count Animals
 // const animal_list = [
