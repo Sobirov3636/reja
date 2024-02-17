@@ -1,10 +1,16 @@
+// E-TASK
+const getReverse = (str) => {
+  return str.split("").reverse().join("");
+};
+const res = getReverse("Hello");
+console.log(res);
 // D-TASK
 
-const checkContent = (str1, str2) => {
-  return str1.split("").sort().join("") === str2.split("").sort().join("");
-};
-const res = checkContent("sobirov", "ibvorso");
-console.log(res);
+// const checkContent = (str1, str2) => {
+//   return str1.split("").sort().join("") === str2.split("").sort().join("");
+// };
+// const res = checkContent("sobirov", "ibvorso");
+// console.log(res);
 
 // C-TASK
 // Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. Har bir method ishga tushgan vaqt ham log qilinsin.
