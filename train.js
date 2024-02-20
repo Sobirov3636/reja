@@ -1,9 +1,47 @@
-// E-TASK
-const getReverse = (str) => {
-  return str.split("").reverse().join("");
+// F-TASK
+// first solution
+const findDoubler = (s) => {
+  const str = s.toLowerCase();
+  for (let i = 0; i < str.length; i++) {
+    // return str[i] === str[i + 1] ? true : false;
+    if (str[i] === str[i + 1]) {
+      return true;
+    }
+  }
+  return false;
 };
-const res = getReverse("Hello");
-console.log(res);
+const res = findDoubler("Hello");
+console.log("res1", res);
+
+// second solution
+
+var findDoubler2 = function (nums) {
+  const set = new Set(nums);
+  return set.size !== nums.length ? true : false;
+};
+const res2 = findDoubler2("Hello");
+console.log("res2:", res2);
+//leetcode problem
+// const countKeyChanges = function (s) {
+//   let count = 0;
+//   const res = s.toLowerCase().split("");
+//   for (let i = 0; i < res.length; i++) {
+//     if (res[i] !== res[i + 1]) {
+//       count++;
+//     }
+//   }
+
+//   return count === 0 ? count : count - 1;
+// };
+// const res = countKeyChanges("aAbBcC");
+// console.log(res);
+
+// E-TASK
+// const getReverse = (str) => {
+//   return str.split("").reverse().join("");
+// };
+// const res = getReverse("Hello");
+// console.log(res);
 // D-TASK
 
 // const checkContent = (str1, str2) => {
