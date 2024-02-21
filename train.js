@@ -1,26 +1,41 @@
-// F-TASK
-// first solution
-const findDoubler = (s) => {
-  const str = s.toLowerCase();
-  for (let i = 0; i < str.length; i++) {
-    // return str[i] === str[i + 1] ? true : false;
-    if (str[i] === str[i + 1]) {
-      return true;
+// leetcode problem
+const findWordsContaining = function (words, x) {
+  let res = [];
+  words.filter((word, index) => {
+    word.split("");
+    if (word.split("").includes(x)) {
+      res.push(index);
     }
-  }
-  return false;
+  });
+  return res;
 };
-const res = findDoubler("Hello");
-console.log("res1", res);
+const javob = findWordsContaining(["leet", "code", "good", "for", "learning"], "e");
+console.log(javob);
 
-// second solution
+// F-TASK
+// // first solution
+// const findDoubler = (s) => {
+//   const str = s.toLowerCase();
+//   for (let i = 0; i < str.length; i++) {
+//     // return str[i] === str[i + 1] ? true : false;
+//     if (str[i] === str[i + 1]) {
+//       return true;
+//     }
+//   }
+//   return false;
+// };
+// const res = findDoubler("Hello");
+// console.log("res1", res);
 
-var findDoubler2 = function (nums) {
-  const set = new Set(nums);
-  return set.size !== nums.length ? true : false;
-};
-const res2 = findDoubler2("Hello");
-console.log("res2:", res2);
+// // second solution
+
+// var findDoubler2 = function (nums) {
+//   const set = new Set(nums);
+//   return set.size !== nums.length ? true : false;
+// };
+// const res2 = findDoubler2("Hello");
+// console.log("res2:", res2);
+
 //leetcode problem
 // const countKeyChanges = function (s) {
 //   let count = 0;
