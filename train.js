@@ -1,16 +1,36 @@
-// leetcode problem
-const findWordsContaining = function (words, x) {
-  let res = [];
-  words.filter((word, index) => {
-    word.split("");
-    if (word.split("").includes(x)) {
-      res.push(index);
-    }
-  });
-  return res;
+// G-TASK solution1
+const getHighestIndex = (arr) => {
+  const max = Math.max(...arr);
+  return arr.indexOf(max);
 };
-const javob = findWordsContaining(["leet", "code", "good", "for", "learning"], "e");
-console.log(javob);
+const res = getHighestIndex([2, 21, 10, 12, 21, 9]);
+console.log("res1:", res);
+
+// G-TASK solution2
+const getHighestIndex2 = (arr) => {
+  let highestIndex = 0;
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > arr[highestIndex]) {
+      highestIndex = i;
+    }
+  }
+  return highestIndex;
+};
+const res2 = getHighestIndex2([2, 21, 10, 12, 21, 9]);
+console.log("res2:", res2);
+// // leetcode problem
+// const findWordsContaining = function (words, x) {
+//   let res = [];
+//   words.filter((word, index) => {
+//     word.split("");
+//     if (word.split("").includes(x)) {
+//       res.push(index);
+//     }
+//   });
+//   return res;
+// };
+// const javob = findWordsContaining(["leet", "code", "good", "for", "learning"], "e");
+// console.log(javob);
 
 // F-TASK
 // // first solution
