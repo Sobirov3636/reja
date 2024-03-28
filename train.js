@@ -18,6 +18,7 @@ const getHighestIndex2 = (arr) => {
 };
 const res2 = getHighestIndex2([2, 21, 10, 12, 21, 9]);
 console.log("res2:", res2);
+console.log("test");
 // // leetcode problem
 // const findWordsContaining = function (words, x) {
 //   let res = [];
